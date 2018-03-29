@@ -1,0 +1,5 @@
+pytest>=2.7.1
+
+matplotlib
+numpy
+scipy
