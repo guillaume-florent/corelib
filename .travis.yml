@@ -15,7 +15,10 @@ install:
 
 #  A job fails if the return code of the script phase is non zero.
 script:
-  - docker run --name corelib guillaume-florent/corelib:latest /bin/bash -c "cd /opt/corelib;pytest tests/"
+  - docker run --name corelib guillaume-florent/corelib:latest /bin/bash -c "cd /opt/corelib;py.test tests/"
 
 after_script:
   - docker images
+
+after_success:
+  - docker run --name corelib guillaume-florent/corelib:latest /bin/bash -c "cd /opt/corelib;coveralls"
