@@ -3,7 +3,7 @@ FROM continuumio/miniconda3:4.4.10
 MAINTAINER Guillaume Florent <florentsailing@gmail.com>
 
 RUN conda update -n base conda
-RUN conda install -y numpy scipy matplotlib pytest
+RUN conda install -y numpy scipy matplotlib pytest psutil
 
 # corelib
 WORKDIR /opt
