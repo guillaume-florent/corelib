@@ -13,7 +13,7 @@ __description__ = "Core library"
 
 __version__ = "0.2.5"
 __author__ = "Guillaume Florent"
-__author_email__ = "fullmar@tutanota.com"
+__author_email__ = "guillaume.florent@tutanota.com"
 __license__ = 'MIT'
-__url__ = "https://github.com/fullmar/corelib"
-__download_url__ = "https://github.com/fullmar/corelib/releases/tag/" + __version__
+__url__ = "https://github.com/guillaume-florent/corelib"
+__download_url__ = "https://github.com/guillaume-florent/corelib/releases/tag/" + __version__

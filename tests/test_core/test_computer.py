@@ -25,27 +25,47 @@ from corelib.core.computer import physical_memory, processor, number_of_cores, \
 
 def test_physical_memory():
     r"""Test total physical memory"""
-    # Old PC Asus G53
-    # assert physical_memory() == 4271013888
+    assert True
+    # This test is not compatible with Continuous Integration as the machine
+    # characteristics on which the tests are run may change
 
-    # New PC Asus G502VS
-    assert physical_memory() == 17112649728
+    # If executing the tests locally :
+    # - comment the assert True statement
+    # - uncomment and adjust the following line :
+    # assert physical_memory() == 17112649728
 
 
 def test_processor():
     r"""Test processor description"""
-    # Old PC Asus G53
-    # assert processor() == "Intel64 Family 6 Model 42 Stepping 7, GenuineIntel"
+    assert True
+    # This test is not compatible with Continuous Integration as the machine
+    # characteristics on which the tests are run may change
 
-    # New PC Asus G502VS
-    assert processor() == "Intel64 Family 6 Model 94 Stepping 3, GenuineIntel"
+    # If executing the tests locally :
+    # - comment the assert True statement
+    # - uncomment and adjust the following line :
+    # assert processor() == "Intel64 Family 6 Model 94 Stepping 3, GenuineIntel"
 
 
 def test_nb_cores():
     r"""Test number of cores"""
-    assert number_of_cores() == 4
+    assert True
+    # This test is not compatible with Continuous Integration as the machine
+    # characteristics on which the tests are run may change
+
+    # If executing the tests locally :
+    # - comment the assert True statement
+    # - uncomment and adjust the following line :
+    # assert number_of_cores() == 4
 
 
 def test_nb_threads():
     r"""Test number of threads"""
-    assert number_of_threads() == 8
+    assert True
+    # This test is not compatible with Continuous Integration as the machine
+    # characteristics on which the tests are run may change
+
+    # If executing the tests locally :
+    # - comment the assert True statement
+    # - uncomment and adjust the following line :
+    # assert number_of_threads() == 8
