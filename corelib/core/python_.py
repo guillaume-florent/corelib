@@ -22,12 +22,12 @@ def py3():
 
 def is_valid_python(code):
     r"""Checks that a string is valid Python code
-    
+
     Parameters
     ----------
     code : str
         The Python code as a string
-        
+
     Returns
     -------
     bool
@@ -44,7 +44,7 @@ def is_valid_python(code):
 
 
 def init_from_args(being_inited):
-    """Initializes attributes of 'being_inited' to a name and value 
+    """Initializes attributes of 'being_inited' to a name and value
     equal to the __init__ function parameters.
     It is mostly used to avoid having to write:
     def __init__(self, param1=value1, param2=value2, ....):

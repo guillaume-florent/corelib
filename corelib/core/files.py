@@ -51,7 +51,7 @@ def is_binary(filename):
 
     Reference
     ---------
-    http://bytes.com/topic/python/answers/21222-determine-file-type-binary-text 
+    http://bytes.com/topic/python/answers/21222-determine-file-type-binary-text
     on 6/08/2010
 
     """

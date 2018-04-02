@@ -1,5 +1,6 @@
 pytest>=2.7.1
 psutil
+jinja2
 matplotlib
 numpy
 scipy

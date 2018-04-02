@@ -2,14 +2,14 @@
 
 r"""timeout decorators for Windows and Linux
 
-Beware that the Windows and the Linux decorator versions 
+Beware that the Windows and the Linux decorator versions
 do not raise the same exception if the timeout is exceeded
 
 """
 
 import platform
-import errno
-import os
+# import errno
+# import os
 import signal
 
 import multiprocessing
@@ -61,9 +61,9 @@ def timeout_windows(max_timeout):
     return timeout_decorator
 
 
-class TimeoutError(Exception):
-    r"""Error for the Linux version of the timeout decorator"""
-    pass
+# class TimeoutError(Exception):
+#     r"""Error for the Linux version of the timeout decorator"""
+#     pass
 
 
 def timeout_linux(max_timeout):

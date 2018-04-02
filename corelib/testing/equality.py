@@ -5,7 +5,7 @@ r"""Utility functions for testing"""
 
 def equals_tolerance(value, target_value, tolerance):
     r"""Checks if a value is within a tolerance of a target value
-    
+
     Parameters
     ----------
     value : float

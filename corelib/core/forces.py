@@ -13,7 +13,7 @@ import numpy as np
 
 
 class Force(object):
-    """A force represented by a vector (force parameter) 
+    """A force represented by a vector (force parameter)
     acting at a given position (position parameter)
 
     Parameters
@@ -54,7 +54,7 @@ class Force(object):
         self.name = name
 
     def moment(self, point_of_reference):
-        """Moment of the force about the origin of the frame of reference 
+        """Moment of the force about the origin of the frame of reference
         used to define 'position'
 
         Parameters
