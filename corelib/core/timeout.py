@@ -61,9 +61,9 @@ def timeout_windows(max_timeout):
     return timeout_decorator
 
 
-# class TimeoutError(Exception):
-#     r"""Error for the Linux version of the timeout decorator"""
-#     pass
+class TimeoutError(Exception):
+    r"""Error for the Linux version of the timeout decorator"""
+    pass
 
 
 def timeout_linux(max_timeout):
