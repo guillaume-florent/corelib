@@ -9,6 +9,18 @@ corelib
 .. image:: https://api.codacy.com/project/badge/Grade/48ceccfeea6a44c8b4487f8f8e9d32be
     :target: https://www.codacy.com/app/guillaume-florent/corelib?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=guillaume-florent/corelib&amp;utm_campaign=Badge_Grade
 
+.. image:: https://anaconda.org/gflorent/corelib/badges/version.svg
+    :target: https://anaconda.org/gflorent/corelib
+
+.. image:: https://anaconda.org/gflorent/corelib/badges/latest_release_date.svg
+    :target: https://anaconda.org/gflorent/corelib
+
+.. image:: https://anaconda.org/gflorent/corelib/badges/platforms.svg
+    :target: https://anaconda.org/gflorent/corelib
+
+.. image:: https://anaconda.org/gflorent/corelib/badges/downloads.svg
+    :target: https://anaconda.org/gflorent/corelib
+
 .. image:: http://img.shields.io/badge/Python-2.7_3.*-ff8840.svg
     :target: https://www.python.org/downloads/
     :alt: Python 2.7 3.*
