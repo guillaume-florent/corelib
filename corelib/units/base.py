@@ -2,8 +2,8 @@
 
 r"""Common logic for the conversion modules
 
-This logic is used by every module but temperature.py as temperature conversions are mre complex than multiplying
-by a conversion coefficient.
+This logic is used by every module but temperature.py as temperature conversions
+are more complex than multiplying by a conversion coefficient.
 
 """
 
@@ -25,9 +25,11 @@ def create_code(dict_name, key_name):
     Parameters
     ----------
     dict_name : str
-        The name of the dictionnary that defines the units in the conversion module
+        The name of the dictionary that defines the units
+        in the conversion module
     key_name : str
-        The key name in the dictionnary that defines the units in the conversion module
+        The key name in the dictionary that defines the units
+        in the conversion module
 
     Returns
     -------

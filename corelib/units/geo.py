@@ -4,7 +4,8 @@ r"""Conversion between geo coordinates"""
 
 
 def decimal_degrees(degrees=0, minutes=0, seconds=0):
-    r"""Convert degrees and decimal minutes or degrees minutes seconds to decimal degrees
+    r"""Convert degrees and decimal minutes or degrees minutes seconds
+    to decimal degrees
 
     Parameters
     ----------
@@ -19,9 +20,11 @@ def decimal_degrees(degrees=0, minutes=0, seconds=0):
 
     Notes
     -----
-    The intentional use of this function is to have all parameters with the same sign
+    The intentional use of this function is to have all parameters
+    with the same sign
     >>> decimal_degrees(20, 30, 45)
-    However it can be use to substract 20 seconds to 30 degrees in the following way:
+    However it can be use to substract 20 seconds to 30 degrees
+    in the following way:
     >>> decimal_degrees(degrees=30, seconds=-20.)
 
     """
@@ -33,7 +36,8 @@ def decimal_degrees(degrees=0, minutes=0, seconds=0):
 
 
 def degrees_minutes_seconds(decimal_degree=0):
-    r"""Convert decimal degrees to degrees and decimal minutes and degrees minutes seconds
+    r"""Convert decimal degrees to
+    degrees and decimal minutes and degrees minutes seconds
 
     Parameters
     ----------
@@ -55,7 +59,8 @@ def degrees_minutes_seconds(decimal_degree=0):
 
     decimal_degree = abs(decimal_degree)
     degree = decimal_degree // 1  # Truncate degree to be an integer
-    decimal_minute = (decimal_degree - degree) * 60.  # Calculate the decimal minutes
+    # Calculate the decimal minutes
+    decimal_minute = (decimal_degree - degree) * 60.
     minute = decimal_minute // 1  # Truncate minute to be an integer
     second = (decimal_minute - minute) * 60.  # Calculate the decimal seconds
     # Finally, re-impose the appropriate sign

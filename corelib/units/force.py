@@ -12,7 +12,8 @@ for k in forces.keys():
 
 
 def convert(value, to_unit, from_unit):
-    r"""Convenience function for cases where the to_unit and the from_unit are in string form
+    r"""Convenience function for cases where the to_unit and the from_unit
+    are in string form
 
     Parameters
     ----------
