@@ -9,7 +9,8 @@ import time
 import platform
 import multiprocessing
 
-from corelib.core.timeout import timeout, TimeoutError
+# from corelib.core.timeout import timeout, TimeoutError
+from corelib.core.timeout import timeout
 
 
 @timeout(1)
