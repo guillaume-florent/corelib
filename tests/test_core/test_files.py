@@ -8,12 +8,22 @@ from os.path import isfile
 
 import pytest
 
-from corelib.core.files import path_from_file, is_binary
+from corelib.core.files import path_from_file, p_, is_binary
 
 
 def test_happy_path():
     r"""The file_origin of path_from_file exists"""
     new_f = path_from_file(__file__, "tmp.txt")
+    with open(new_f, "w") as nf:
+        nf.write("\n")
+    assert isfile(new_f) is True
+    remove(new_f)
+    assert isfile(new_f) is False
+
+
+def test_happy_path_shortcut():
+    r"""Same test, using the shortcut notation"""
+    new_f = p_(__file__, "tmp.txt")
     with open(new_f, "w") as nf:
         nf.write("\n")
     assert isfile(new_f) is True

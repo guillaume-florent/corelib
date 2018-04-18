@@ -1,45 +1,16 @@
-# Specifies package information.
 package:
-  # The lower case name of the package. It may contain “-“, but no spaces.
   name: corelib
-  # The version number of the package.
-  # Use the PEP-386 verlib conventions. Cannot contain “-“.
-  # YAML interprets version numbers such as 1.0 as floats, meaning that 0.10 will be the same as 0.1.
-  # To avoid this, put the version number in quotes so that it is interpreted as a string.
-  version: "0.2.6"
+  version: "0.2.7"
 
-
-# Specifies where the source code of the package is coming from.
-# The source may come from a tarball file, git, hg or svn.
-# It may be a local path, and it may contain patches.
 source:
-  # If the path is relative, it is taken relative to the recipe directory.
-  # The source is copied to the work directory before building.
   path: ../corelib
-  # TODO: Building from github caused a core package error not found
-  # git_rev: master
-  # git_url: https://github.com/guillaume-florent/corelib.git
 
-
-# Specifies build information.
 build:
-  # The build number should be incremented for new builds of the same version.
-  # The number defaults to 0. The build string cannot contain “-“.
-  # The string defaults to the default conda build string plus the build number.
   number: 0
-  # For pure Python packages that can run on any Python version,
-  # you can use the noarch: python value
   noarch: python
-  # Used instead of build.sh or bld.bat.
-  # For short build scripts, this can be more convenient.
-  # You may need to use selectors to use different scripts for different platforms.
   script: python setup.py install --single-version-externally-managed --record record.txt
   include_recipe: True
 
-
-# Specifies the build and runtime requirements.
-# Dependencies of these requirements are included automatically.
-# Versions for requirements must follow the conda match specification.
 requirements:
   build:
     - python
@@ -53,34 +24,14 @@ requirements:
     - jinja2
     - psutil
 
-
-# If this section exists or if there is a run_test.[py,pl,sh,bat] file in the recipe,
-# the package is installed into a test environment after the build is finished,
-# and the tests are run there.
 test:
-  # In addition to the runtime requirements, you can specify requirements
-  # needed during testing. The runtime requirements that you specified in the
-   # “run” section described above are automatically included during testing.
   requires:
     - pytest
-  # Test files that are copied from the source work directory into the
-  # temporary test directory and are needed during testing.
   source_files:
     - tests
-  # Commands that are run as part of the test.
   commands:
     - pytest tests/
-  # List of Python modules or packages that will be imported in the test environment.
-  # imports:
-  #   - corelib
-  #   - corelib.core
-  #   - corelib.geometry
-  #   - corelib.testing
-  #   - corelib.units
 
-
-# Specifies identifying information about the package.
-# The information displays in the Anaconda.org channel.
 about:
   home: https://github.com/guillaume-florent/corelib
   license: MIT

@@ -36,6 +36,10 @@ def path_from_file(file_origin, relative_path):
     return os.path.abspath(os.path.join(dir_of_file_origin, relative_path))
 
 
+# Make it possible to use a shorter syntax
+p_ = path_from_file
+
+
 def is_binary(filename):
     """
     Return True if the given filename is binary, False otherwise.
