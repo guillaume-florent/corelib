@@ -16,6 +16,12 @@ import multiprocessing
 import multiprocessing.pool
 from functools import wraps
 
+# Python 2 compatibility.
+try:
+    TimeoutError
+except NameError:
+    TimeoutError = RuntimeError
+
 
 def timeout(max_timeout):
     r"""Use the right timeout based on platform.system()

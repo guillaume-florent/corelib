@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 __name__ = "corelib"
 __description__ = "Core library"
 
-__version__ = "0.2.7"
+__version__ = "0.2.8"
 __author__ = "Guillaume Florent"
 __author_email__ = "guillaume.florent@tutanota.com"
 __license__ = 'MIT'

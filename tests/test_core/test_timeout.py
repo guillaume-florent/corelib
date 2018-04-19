@@ -12,6 +12,12 @@ import multiprocessing
 # from corelib.core.timeout import timeout, TimeoutError
 from corelib.core.timeout import timeout
 
+# Python 2 compatibility.
+try:
+    TimeoutError
+except NameError:
+    TimeoutError = RuntimeError
+
 
 @timeout(1)
 def f(waiting_time):

@@ -1,6 +1,6 @@
 package:
   name: corelib
-  version: "0.2.7"
+  version: "0.2.8"
 
 source:
   path: ../corelib

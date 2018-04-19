@@ -20,6 +20,9 @@ def py3():
         return False
 
 
+string_types = str if py3() else (unicode, str)
+
+
 def is_valid_python(code):
     r"""Checks that a string is valid Python code
 
