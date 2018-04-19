@@ -9,4 +9,5 @@ RUN conda install -y numpy scipy matplotlib pytest psutil jinja2
 WORKDIR /opt
 ADD https://api.github.com/repos/guillaume-florent/corelib/git/refs/heads/master version.json
 RUN git clone --depth=1 https://github.com/guillaume-florent/corelib
-RUN cp -r /opt/corelib/corelib /opt/conda/lib/python3.6/site-packages
+WORKDIR /opt/corelib
+RUN python setup.py install
