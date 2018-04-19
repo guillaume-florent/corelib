@@ -6,16 +6,13 @@ git:
 services:
   - docker
 
-# A build on Travis CI is made up of two steps:
-#    install: install any dependencies required
-#    script: run the build script
-
 install:
-  - docker build --tag guillaume-florent/corelib:latest .
+  - docker build --file Dockerfile.py3 --tag guillaume-florent/corelib-py3:latest .
+  - docker build --file Dockerfile.py2 --tag guillaume-florent/corelib-py2:latest .
 
-#  A job fails if the return code of the script phase is non zero.
 script:
-  - docker run --name corelib guillaume-florent/corelib:latest /bin/bash -c "cd /opt/corelib;pytest tests/"
+  - docker run guillaume-florent/corelib-py3:latest /bin/bash -c "cd /opt/corelib;pytest tests/"
+  - docker run guillaume-florent/corelib-py2:latest /bin/bash -c "cd /opt/corelib;pytest tests/"
 
 after_script:
   - docker images

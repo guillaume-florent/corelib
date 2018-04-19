@@ -6,7 +6,7 @@ imageName="guillaume-florent/corelib:latest"
 containerName="corelib"
 displayVar="$DISPLAY"
 
-docker build --tag ${imageName} .
+docker build --file Dockerfile.py3 --tag ${imageName} .
 
 docker run  -it -d --name ${containerName}                  \
     -e DISPLAY=${displayVar}                                \
