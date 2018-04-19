@@ -7,7 +7,7 @@ RUN conda install -y numpy scipy matplotlib pytest psutil jinja2
 
 # corelib
 WORKDIR /opt
-ADD https://api.github.com/repos/guillaume-florent/corelib/git/refs/heads/master version.json
+# ADD https://api.github.com/repos/guillaume-florent/corelib/git/refs/heads/master version.json
 RUN git clone --depth=1 https://github.com/guillaume-florent/corelib
 WORKDIR /opt/corelib
 RUN python setup.py install
