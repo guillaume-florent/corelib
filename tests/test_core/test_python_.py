@@ -18,7 +18,16 @@ def test_is_valid_python():
 class A(object):
     r"""Dummy class for testing"""
     def __init__(self, one, two, three, four=4):
+        five = 5
         init_from_args(self)
+        six = 6
+
+
+# class B(object):
+#     r"""Dummy class for testing"""
+#     def __init__(self, one, two, three, four=4):
+#         five = 5
+#         init_from_args(self, b_just_args=True)
 
 
 def test_init_from_args():
@@ -28,10 +37,13 @@ def test_init_from_args():
     assert hasattr(a, "two")
     assert hasattr(a, "three")
     assert hasattr(a, "four")
+    assert hasattr(a, "five")
+    assert not hasattr(a, "six")
     assert a.one == 1
     assert a.two == 2
     assert a.three == 3
     assert a.four == 4
+    assert a.five == 5
 
 
 def test_init_from_args_and_kwargs():

@@ -68,8 +68,9 @@ def init_from_args(being_inited):
     # Works only in Python 2, not in Python 3
     # code_object = being_inited.__class__.__init__.im_func.func_code
 
-    code_object = being_inited.__class__.__init__.__code__
+    # code_object = being_inited.__class__.__init__.__code__
     for k, v in sys._getframe(1).f_locals.items():
-        if k != 'self' \
-           and k in code_object.co_varnames[1:code_object.co_argcount]:
+        # if k != 'self' \
+        #    and k in code_object.co_varnames[1:code_object.co_argcount]:
+        if k != "self":
             setattr(being_inited, k, v)
