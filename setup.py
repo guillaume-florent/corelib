@@ -43,6 +43,8 @@ setup(
               'corelib.core',
               'corelib.geometry',
               'corelib.testing',
+              'corelib.ui',
+              'corelib.ui.wx_',
               'corelib.units'],
     install_requires=['numpy', 'scipy', 'matplotlib', 'jinja2', 'psutil'],
     extras_require={
