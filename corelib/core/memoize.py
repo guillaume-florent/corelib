@@ -7,25 +7,39 @@ Memoize is for instance methods
 
 """
 
-from functools import partial
+from functools import partial, wraps
 
 
-def memoize(f):
-    """ Memoization decorator for functions taking one or more arguments. """
-    class Memodict(dict):
-        r"""Memodict inherits dict to store already computed values"""
-        def __init__(self, func_):
-            super(Memodict, self).__init__()
-            self.f = func_
+# def memoize(f):
+#     """ Memoization decorator for functions taking one or more arguments. """
+#     class Memodict(dict):
+#         r"""Memodict inherits dict to store already computed values"""
+#         def __init__(self, func_):
+#             super(Memodict, self).__init__()
+#             self.f = func_
+#
+#         def __call__(self, *args):
+#             return self[args]
+#
+#         def __missing__(self, key):
+#             ret = self[key] = self.f(*key)
+#             return ret
+#
+#     return Memodict(f)
 
-        def __call__(self, *args):
-            return self[args]
 
-        def __missing__(self, key):
-            ret = self[key] = self.f(*key)
-            return ret
+def memoize(func):
+    """Memoization decorator for functions taking args and kwargs"""
+    cache = func.cache = {}
 
-    return Memodict(f)
+    @wraps(func)
+    def memoized_func(*args, **kwargs):
+        key = str(args) + str(kwargs)
+        if key not in cache:
+            cache[key] = func(*args, **kwargs)
+        return cache[key]
+
+    return memoized_func
 
 
 class Memoize(object):
