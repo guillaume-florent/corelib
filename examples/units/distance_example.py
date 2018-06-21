@@ -3,10 +3,10 @@
 
 r"""Example distance conversion"""
 
-import fsunits.distance
+from corelib.units.distance import cm, inches
 
 # convert 12.0 inches to centimeters
-print(fsunits.distance.cm(inches=12.0))
+print(cm(inches=12.0))
 
 # convert 55 cm to inches
-print(fsunits.distance.inches(cm=55))
+print(inches(cm=55))
