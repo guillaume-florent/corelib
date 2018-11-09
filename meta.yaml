@@ -1,6 +1,6 @@
 package:
   name: corelib
-  version: "0.2.13"
+  version: "0.2.14"
 
 source:
   path: ../corelib
@@ -8,7 +8,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python setup.py install
   include_recipe: True
 
 requirements:
